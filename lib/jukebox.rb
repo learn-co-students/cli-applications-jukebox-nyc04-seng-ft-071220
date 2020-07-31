@@ -23,19 +23,19 @@ end
 def play(songs)
     puts "Please enter a song name or number:"
     input = gets.chomp.strip
-    songNumber = input.to_i + 1
-    songByName = songs.find do |track|
-        track == input
-    end 
-    # binding.pry
-    if songNumber <= songs.count
-        puts "Playing #{songs[songNumber]}"
+    songNumber = input.to_i 
+        songByName = songs.find do |track|
+            track == input
+        end 
+
+        if songNumber >= 1 && songNumber <= songs.count
+            puts "Playing #{songs[songNumber -1]}"
         # binding.pry
-    elsif songs.include? input
-        puts "Playing #{songByName}"
-    else 
-        puts "Invalid input, please try again" 
-    end
+        elsif songs.include? (input)
+            puts "Playing #{songByName}"
+        else 
+            puts "Invalid input, please try again" 
+        end
 end 
 
 def list(songs)
@@ -46,7 +46,22 @@ def list(songs)
 end 
 
 def exit_jukebox
+    puts "Goodbye"
 end 
 
-def run 
+def run(songs)
+    puts "Please enter a command:"
+    input = gets.chomp.strip
+    while true do
+        case input 
+        when "list"
+            list(songs)
+        when "play"
+            play(songs)
+        when "help"
+            help 
+        when "exit"
+            exit_jukebox
+        end 
+    end      
 end 
