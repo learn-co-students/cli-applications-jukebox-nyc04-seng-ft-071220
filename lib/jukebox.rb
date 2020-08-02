@@ -54,7 +54,7 @@ end
 def run(songs)
   help
   while true do
-    puts "Please enter a command:"
+    puts "I accept the following commands:"
     input = gets.strip
     case input
     when "help"
