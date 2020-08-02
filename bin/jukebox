@@ -18,5 +18,10 @@ songs = [
 puts "Enter your name:"
 users_name = gets.strip
 puts say_hello(users_name)
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> bb0f6121238e4867173c0193ea256af59e7e5bec
 
 run(songs)
