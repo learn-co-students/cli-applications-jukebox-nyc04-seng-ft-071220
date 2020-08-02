@@ -1,9 +1,3 @@
-# Add your code here
-<<<<<<< HEAD
-# Add your code here
-=======
->>>>>>> bb0f6121238e4867173c0193ea256af59e7e5bec
-require 'pry'
 
 
 def say_hello(name)
